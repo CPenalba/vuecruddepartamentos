@@ -14,6 +14,7 @@
           <th>Localidad</th>
           <th>Detalles</th>
           <th>Update</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +24,7 @@
           <td>{{ dept.localidad }}</td>
           <td>
             <router-link
-              class="btn btn-info"
+              class="btn btn-warning"
               :to="
                 '/details/' +
                 dept.idDepartamento +
@@ -38,11 +39,15 @@
           <td>
             <router-link
               class="btn btn-info"
-              :to="
-                '/update/' +
-                dept.idDepartamento 
-              "
+              :to="'/update/' + dept.idDepartamento"
               >Update</router-link
+            >
+          </td>
+          <td>
+            <router-link
+              class="btn btn-dark"
+              :to="'/delete/' + dept.idDepartamento"
+              >Delete</router-link
             >
           </td>
         </tr>
